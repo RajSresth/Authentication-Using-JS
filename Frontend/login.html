@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <!-- Google Fonts CDN Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CDN Link -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        *,*::after,*::before{
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        body{
+            width: 100vw;
+            min-height: 100vh;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container{
+            width: 400px;
+            height: fit-content;
+            padding: 10px 30px;
+            box-shadow: 0px 0px 7px 1px #777;
+        }
+
+        .container h2{
+            font-size: 28px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+        .container form{
+            padding-block: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .container input{
+            width: 100%;
+            padding: 10px 0px;
+            font-size: 15px;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #222;
+        }
+
+        .container input::placeholder{
+            color: #555;
+        }
+
+        .container button{
+              padding: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+
+        .container .password-container a{
+            font-size: 13px;
+            text-decoration: none;
+            color: royalblue;
+            font-weight: 410;
+            letter-spacing: 0.125px;
+        }
+
+        .container .captcha-container{
+            width: 100%;
+            height: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .container .captcha-container .displayCaptcha{
+            width: 40%;
+            border:1px solid #777;
+            border-radius: 2px;            
+        }
+
+        .container .captcha-container .refreshCaptcha{
+            background-color: transparent;
+            padding:0px 5px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+        .container .captcha-container input[name="captcha-code"]
+        {
+            padding-left: 5px;
+            width: 45%;
+        }
+        .container .checkbox-container input{
+            width: initial;
+
+        }
+        
+        .container span{
+            color: #555;
+            padding-left: 5px;
+            font-size: 13.75px;
+        }
+         .container span a{
+            color: royalblue;
+         }
+
+         .container .bottom{
+            text-align: center;
+         }
+    </style>
+</head>
+<body>
+   <div class="container">
+         <h2>Login Form</h2>
+        <form action="">
+            <input type="email" placeholder="Enter email id" name="email">
+           <div class="password-container">
+                 <input type="password" placeholder="Enter password" name="password"> <br>
+                <a href="">Forget Password?</a>
+           </div>
+
+            <div class="captcha-container">
+                    <div class="displayCaptcha"></div>
+                    <div class="refreshCaptcha">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </div>
+                    <input type="text" name="captcha-code" placeholder="Enter Captcha" required>
+            </div>
+
+            <p class="checkbox-container">
+                <input type="checkbox" required> <span>Do you agree with out <a href="">Terms & condition</a>.</span>
+            </p>
+
+            <button type="submit">Login</button>
+            <button type="reset">Cancel</button>
+            
+            <p class="bottom">
+                <span>Create an Account? <a href="./signin.html">Signin</a></span>
+            </p>
+        </form>
+   </div>
+</body>
+</html>

@@ -128,13 +128,13 @@
 <body>
    <div class="container">
          <h2>Signin Form</h2>
-        <form action="">
+        <form action="" autocomplete="off">
             <input type="text" placeholder="Enter fullname" name="username">
             <input type="email" placeholder="Enter email id" name="email">
             <input type="password" placeholder="Enter password" name="password">         
            
 
-            <div class="captcha-container">
+            <!-- <div class="captcha-container">
                     <div class="displayCaptcha"></div>
                     <div class="refreshCaptcha">
                         <i class="bi bi-arrow-clockwise"></i>
@@ -144,7 +144,7 @@
 
             <p class="checkbox-container">
                 <input type="checkbox" required> <span>Are you not a robot?</span>
-            </p>
+            </p> -->
 
             <button type="submit">Signin</button>
             <button type="reset">Cancel</button>
@@ -154,5 +154,7 @@
             </p>
         </form>
    </div>
+
+   <script type="module" src="signin.js"></script>
 </body>
 </html>

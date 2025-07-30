@@ -71,6 +71,16 @@
             font-size: 27px;
             
         }
+        section {
+            height: calc(100vh - 100px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section span{
+            text-transform: capitalize;
+        }
         
     </style>
 </head>
@@ -86,5 +96,11 @@
             </nav>
         </div>
     </header>
+
+    <section>
+        <h1>Welcome <span class="userInfo"></span></h1>
+    </section>
+
+    <script type="module" src="home.js"></script>
 </body>
 </html>

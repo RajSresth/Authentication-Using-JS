@@ -134,24 +134,24 @@
 <body>
    <div class="container">
          <h2>Login Form</h2>
-        <form action="">
+        <form action="" autocomplete="off">
             <input type="email" placeholder="Enter email id" name="email">
            <div class="password-container">
                  <input type="password" placeholder="Enter password" name="password"> <br>
                 <a href="">Forget Password?</a>
            </div>
 
-            <div class="captcha-container">
+            <!-- <div class="captcha-container">
                     <div class="displayCaptcha"></div>
                     <div class="refreshCaptcha">
                         <i class="bi bi-arrow-clockwise"></i>
                     </div>
                     <input type="text" name="captcha-code" placeholder="Enter Captcha" required>
-            </div>
-
+            </div> -->
+<!-- 
             <p class="checkbox-container">
                 <input type="checkbox" required> <span>Do you agree with out <a href="">Terms & condition</a>.</span>
-            </p>
+            </p> -->
 
             <button type="submit">Login</button>
             <button type="reset">Cancel</button>
@@ -161,5 +161,7 @@
             </p>
         </form>
    </div>
+
+   <script type="module" src="login.js"></script>
 </body>
 </html>

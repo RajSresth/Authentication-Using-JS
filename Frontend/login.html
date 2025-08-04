@@ -114,7 +114,7 @@
             cursor: pointer;
         }
         
-        .container .captcha-container input[name="captcha-code"]
+        .container .captcha-container input[name="captchaCode"]
         {
             padding-left: 5px;
             width: 45%;
@@ -145,7 +145,7 @@
             <input type="email" placeholder="Enter email id" name="email">
            <div class="password-container">
                  <input type="password" placeholder="Enter password" name="password"> <br>
-                <a href="">Forget Password?</a>
+                <a href="forgetPassword.html">Forget Password?</a>
            </div>
 
             <div class="captcha-container">
@@ -153,11 +153,11 @@
                     <div  class="refreshCaptcha animate__animated">
                         <i class="bi bi-arrow-clockwise" ></i>
                     </div>
-                    <input type="text" name="captcha-code" placeholder="Enter Captcha" required>
+                    <input type="text" name="captchaCode" placeholder="Enter Captcha" required>
             </div>
 
             <p class="checkbox-container">
-                <input type="checkbox" required> <span>Do you agree with out <a href="">Terms & condition</a>.</span>
+                <input type="checkbox" name="checkbox"  required> <span>Do you agree with out <a href="">Terms & condition</a>.</span>
             </p>
 
             <button type="submit">Login</button>

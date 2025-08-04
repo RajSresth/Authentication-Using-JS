@@ -3,7 +3,8 @@
     {
       "username": "ajit",
       "email": "ajit@gmail.com",
-      "password": "ajit123"
+      "password": "ajit123",
+      "id": "f376"
     },
     {
       "id": "dec0",
@@ -16,6 +17,13 @@
       "username": "Sid",
       "email": "sid@gmail.com",
       "password": "sid456"
+    },
+    {
+      "id": "c4f4",
+      "username": "Max",
+      "email": "max@gmail.com",
+      "password": "max123",
+      "captchaCode": "eTX3Je"
     }
   ]
 }

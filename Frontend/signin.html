@@ -89,9 +89,16 @@
         }
 
         .container .captcha-container .displayCaptcha{
-            width: 40%;
+            width: 55%;
             border:1px solid #777;
-            border-radius: 2px;            
+            border-radius: 2px;   
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 4px;
+            font-size: 18px;
+            color: rgb(18, 104, 18);
+            font-weight: 500;         
         }
 
         .container .captcha-container .refreshCaptcha{
@@ -101,14 +108,13 @@
             cursor: pointer;
         }
         
-        .container .captcha-container input[name="captcha-code"]
+        .container .captcha-container input[name="captchaCode"]
         {
             padding-left: 5px;
             width: 45%;
         }
         .container .checkbox-container input{
             width: initial;
-
         }
         
         .container span{
@@ -134,17 +140,17 @@
             <input type="password" placeholder="Enter password" name="password">         
            
 
-            <!-- <div class="captcha-container">
+            <div class="captcha-container">
                     <div class="displayCaptcha"></div>
-                    <div class="refreshCaptcha">
+                    <div class="refreshCaptcha animate__animated">
                         <i class="bi bi-arrow-clockwise"></i>
                     </div>
-                    <input type="text" name="captcha-code" placeholder="Enter Captcha" required>
+                    <input type="text" name="captchaCode" placeholder="Enter Captcha" required>
             </div>
 
             <p class="checkbox-container">
                 <input type="checkbox" required> <span>Are you not a robot?</span>
-            </p> -->
+            </p>
 
             <button type="submit">Signin</button>
             <button type="reset">Cancel</button>

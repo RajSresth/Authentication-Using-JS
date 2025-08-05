@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "axios": "^1.11.0",
     "json-server": "^1.0.0-beta.3",
     "vite": "^7.0.6"

@@ -65,7 +65,7 @@ function startTimer(duration) {
   }, 1000);
 }
 
-sendOtp.addEventListener("click", async () => {
+sendOtp.addEventListener("click", () => {
   emailVerificationForm.style.display = "none";
 
   // Generate 6 digit otp;
@@ -88,13 +88,14 @@ sendOtp.addEventListener("click", async () => {
       startTimer(120);
     })
     .catch((error) => {
+      console.error("EmailJS send error:", err);
       alert("Failed to send OTP. Please try again.");
     });
 });
 
 // Resend otp button
 resendOtpBtn.addEventListener("click", () => {
-  sendOtp.click();
+  sendOtp.click(); // Here we are re-use send OTP
 });
 
 confirmOtpBtn.addEventListener("click", () => {
@@ -105,9 +106,12 @@ confirmOtpBtn.addEventListener("click", () => {
   }
 
   const enteredOtp = otpInput.value;
-  console.log(getOtp);
+  console.log("Entered OTP", enteredOtp, typeof enteredOtp);
+  console.log("Get OTP", getOtp, typeof getOtp);
+
   // Otp value comparison
   if (getOtp == enteredOtp) {
+    alert("OTP Verified..");
     otpVerificationForm.style.display = "none";
     resetPasswordForm.style.display = "flex";
   } else {
@@ -116,9 +120,14 @@ confirmOtpBtn.addEventListener("click", () => {
   }
 });
 
+//otpVerificationForm
+otpVerificationForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
 // resetPasswordForm
 resetPasswordForm.addEventListener("submit", async (e) => {
-    e.preventDefault
+  e.preventDefault();
   const newPassword = document.querySelector("#newPassword").value;
   const confirmPassword = document.querySelector("#confirmPassword").value;
 
@@ -128,13 +137,13 @@ resetPasswordForm.addEventListener("submit", async (e) => {
   }
 
   try {
-    axios.patch(`${API_Url}/id=${userId}`, {
+    axios.patch(`${API_Url}/${userId}`, {
       password: newPassword,
     });
 
     alert("Password reset successfully");
     window.location.href = "login.html";
   } catch (err) {
-    alert("Something wen Wrong...");
+    alert("Something went Wrong...");
   }
 });
